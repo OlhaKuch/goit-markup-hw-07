@@ -8,10 +8,10 @@
   --backfround-non-active-button: #f5f4fa;
   --backfround-active-button: #188ce8;
   --background-button: #2196f3;
-  --transition-dur-fun: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-dur-fun: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sign-up, .social-media-footer-link {
+.sign-up, .social-media-footer-link, .social__link {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +93,38 @@ section {
   padding-right: 15px;
 }
 
+.social__item {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+}
+
+.social__link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: #afb1b8;
+  transition: background-color var(--transition-dur-fun), color var(--transition-dur-fun);
+}
+.social__link:hover, .social__link:focus {
+  background-color: var(--accent-color);
+  color: var(--elements-color);
+}
+
+.from-h3-to-text {
+  margin-bottom: 10px;
+}
+
+.from-h2-to-content {
+  margin-bottom: 50px;
+}
+
 .page-header {
   border-bottom: 1px solid #ececec;
 }
@@ -129,8 +161,8 @@ section {
   padding-bottom: 24px;
   color: var(--accent-color);
   font-family: var(--secondary-font);
-  font-weight: 700;
   font-size: 26px;
+  font-weight: 700;
   line-height: 1.19;
 }
 .logo__style {
@@ -148,6 +180,8 @@ section {
   fill: var(--text-color);
 }
 .contacts__item {
+  font-size: 14px;
+  font-weight: 500;
   display: flex;
   align-items: center;
   color: var(--text-color);
@@ -173,15 +207,15 @@ section {
   padding-bottom: 32px;
   position: relative;
   margin-bottom: -1px;
+  color: var(--accent-color);
 }
-
 .navigation__link_current::after {
   content: "";
   display: block;
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: #2196f3;
+  background-color: var(--accent-color);
   position: absolute;
   top: 76px;
   left: 0;
@@ -195,8 +229,8 @@ section {
 
 .portfolio-button-style {
   font-family: inherit;
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.63;
   text-align: center;
   letter-spacing: 0.03em;
@@ -220,8 +254,8 @@ section {
 }
 
 .overlay-text {
-  font-weight: 400;
   font-size: 18px;
+  font-weight: 400;
   line-height: 1.56;
   letter-spacing: 0.03em;
   background-color: rgba(33, 150, 243, 0.9);
@@ -252,8 +286,8 @@ section {
 }
 
 .our-work-list {
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--names-color);
@@ -261,8 +295,8 @@ section {
 }
 
 .our-work-discription {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.88;
   color: var(--text-color);
 }
@@ -284,14 +318,23 @@ section {
   font-size: 26px;
   line-height: 1.19;
 }
+.footer-logo:focus, .footer-logo:hover,
+.footer-logo-style:focus,
+.footer-logo-style:hover {
+  color: var(--accent-color);
+}
 
 .footer-logo {
   color: var(--accent-color);
 }
 
+.footer-logo-style {
+  color: var(--elements-color);
+}
+
 .connection {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
@@ -385,8 +428,8 @@ section {
 }
 
 .call-to-action {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -414,8 +457,8 @@ section {
 .enter-button {
   width: 200px;
   height: 50px;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--elements-color);

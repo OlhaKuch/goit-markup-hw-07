@@ -5,13 +5,6 @@
   text-align: center;
   color: var(--names-color);
 }
-.clients__title {
-  @include font(36px, 700);
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
 
 .clients__link {
   @extend %align;
@@ -27,11 +20,18 @@
     color: var(--accent-color);
   }
 }
-
+.clients__title {
+  @include font(36px, 700);
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
 .clients__logo {
   width: 106px;
   height: 60px;
   fill: currentColor;
+  transition: color var(--transition-dur-fun);
   &:hover,
   &:focus {
     color: var(--accent-color);

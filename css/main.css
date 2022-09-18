@@ -8,7 +8,7 @@
   --backfround-non-active-button: #f5f4fa;
   --backfround-active-button: #188ce8;
   --background-button: #2196f3;
-  --transition-dur-fun: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-dur-fun: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sign-up, .social-media-footer-link, .clients__link, .service__discribe, .close-btn, .social__link {
@@ -175,8 +175,8 @@ section {
 
 .contact-form-title {
   font: var(--primery-font);
-  font-weight: 700;
   font-size: 20px;
+  font-weight: 700;
   line-height: 23px;
   text-align: center;
   letter-spacing: 0.03em;
@@ -197,12 +197,16 @@ section {
   padding-left: 42px;
   transition: border var(--transition-dur-fun);
 }
+.form-for-fill:focus, .form-for-fill:hover {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
 
 .claim {
   display: block;
   font-family: var(--primery-font);
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: var(--text-color);
@@ -212,10 +216,6 @@ section {
 .fill-box-wrapper {
   display: block;
   position: relative;
-}
-.fill-box-wrapper.form-for-fill:focus, .fill-box-wrapper.form-for-fill:hover {
-  border: 1px solid var(--accent-color);
-  outline: none;
 }
 
 .contact-icon {
@@ -249,16 +249,14 @@ section {
   border-radius: 4px;
   transition: border var(--transition-dur-fun);
 }
-
 .form-for-fill-comment::placeholder {
   font-family: var(--primery-font);
-  font-weight: 400;
   font-size: 12px;
+  font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
-
 .form-for-fill-comment:focus {
   border: 1px solid var(--accent-color);
   outline: none;
@@ -309,8 +307,8 @@ section {
 }
 
 .btn-submit-form {
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
   border: none;
@@ -357,8 +355,8 @@ section {
 }
 
 .feartures__name {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--names-color);
@@ -405,8 +403,8 @@ section {
   padding-bottom: 24px;
   color: var(--accent-color);
   font-family: var(--secondary-font);
-  font-weight: 700;
   font-size: 26px;
+  font-weight: 700;
   line-height: 1.19;
 }
 .logo__style {
@@ -478,8 +476,8 @@ section {
 }
 .service__title {
   width: 696px;
-  font-weight: 900;
   font-size: 44px;
+  font-weight: 900;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -490,8 +488,8 @@ section {
   margin-right: auto;
 }
 .service__button {
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 1.88;
   letter-spacing: 0.06em;
   border: none;
@@ -511,8 +509,8 @@ section {
 }
 
 .services__title {
-  font-weight: 700;
   font-size: 36px;
+  font-weight: 700;
   line-height: 1.17;
   text-align: center;
   color: var(--names-color);
@@ -540,8 +538,8 @@ section {
 }
 
 .team__title {
-  font-weight: 700;
   font-size: 36px;
+  font-weight: 700;
   line-height: 1.17;
   text-align: center;
   color: var(--names-color);
@@ -570,15 +568,15 @@ section {
 }
 
 .team__person {
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
   line-height: 1.19;
   color: var(--names-color);
 }
 
 .team__skills {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.16;
   margin-bottom: 16px;
 }
@@ -591,15 +589,6 @@ section {
   color: var(--names-color);
 }
 
-.clients__title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  letter-spacing: 0.03em;
-  margin-bottom: 50px;
-}
-
 .clients__link {
   width: 170px;
   height: 92px;
@@ -608,24 +597,33 @@ section {
   border-radius: 4px;
   transition: border var(--transition-dur-fun), color var(--transition-dur-fun);
 }
+.clients__link:hover, .clients__link:focus {
+  border: var(--accent-color) solid 1px;
+  color: var(--accent-color);
+}
+
+.clients__title {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
 
 .clients__logo {
   width: 106px;
   height: 60px;
   fill: currentColor;
+  transition: color var(--transition-dur-fun);
 }
-.clients__logo.clients__link:hover, .clients__logo.clients__link:focus {
-  border: var(--accent-color) solid 1px;
+.clients__logo:hover, .clients__logo:focus {
   color: var(--accent-color);
 }
 
 .clients__list {
   display: flex;
   column-gap: 30px;
-}
-.clients__list__link:hover, .clients__list__link:focus {
-  border: var(--accent-color) solid 1px;
-  color: var(--accent-color);
 }
 
 .footer-logo,
@@ -635,14 +633,23 @@ section {
   font-size: 26px;
   line-height: 1.19;
 }
+.footer-logo:focus, .footer-logo:hover,
+.footer-logo-style:focus,
+.footer-logo-style:hover {
+  color: var(--accent-color);
+}
 
 .footer-logo {
   color: var(--accent-color);
 }
 
+.footer-logo-style {
+  color: var(--elements-color);
+}
+
 .connection {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
   color: #ffffff;
@@ -736,8 +743,8 @@ section {
 }
 
 .call-to-action {
-  font-weight: 700;
   font-size: 14px;
+  font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -765,8 +772,8 @@ section {
 .enter-button {
   width: 200px;
   height: 50px;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
   line-height: 2;
   letter-spacing: 0.06em;
   color: var(--elements-color);
